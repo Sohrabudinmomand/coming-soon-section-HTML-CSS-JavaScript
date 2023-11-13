@@ -1,9 +1,16 @@
+let targetDate = localStorage.getItem('tergetDate');
+
 
 // Set the target date 2 years from now
-const targetDate = new Date();
-targetDate.setFullYear(targetDate.getFullYear() + 2);
+if (!targetDate) {
+    targetDate = new Date();
+    targetDate.setFullYear(targetDate.getFullYear() + 2);
+    localStorage.setItem('tergetDate', targetDate);
+} else {
+    targetDate = new Date(targetDate);
+}
 
-// Update the countdown every second
+// Update the countdown every secondv
 const countdown = setInterval(updateCountdown, 1000);
 
 function updateCountdown() {
@@ -26,6 +33,11 @@ function updateCountdown() {
         document.getElementById('countdown').textContent = 'Countdown expired!';
     }
 }
+
+window.onload = function () {
+    updateCountdown()
+}
+
 
 // Initial call to set up the countdown
 updateCountdown();
