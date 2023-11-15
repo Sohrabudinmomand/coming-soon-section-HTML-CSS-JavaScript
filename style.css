@@ -92,7 +92,6 @@ p {
 .hero-section-container {
   width: 90%;
   height: 100vh;
-  max-width: 1600px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -211,8 +210,6 @@ p {
 .hero-image {
   width: 362px;
   height: 316px;
-
-
 }
 
 @-webkit-keyframes swinging {
@@ -278,12 +275,12 @@ p {
 @media (max-width: 1920px) {
   .icons img:nth-child(1) {
     left: 10%;
-    top: 6%
+    top: 6%;
   }
 
   .icons img:nth-child(2) {
     left: 28%;
-    top: 14%;
+    top: 10%;
   }
 
   .icons img:nth-child(3) {
@@ -304,6 +301,7 @@ p {
   .icons img:nth-child(6) {
     left: 90%;
     top: 50%;
+
   }
 
   .hero-section-container {
@@ -318,44 +316,134 @@ p {
 
   .hero-section-container {
     width: 80%;
-    /* max-width: 1400px; */
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .hero-section-container {
+    width: 85%;
   }
 
-  /* .icons img:nth-child(1) {
+  .hero-section-container {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-section-container {
+    width: 90%;
+  }
+
+  .coming-soon-text {
+    font-size: 54px;
+    line-height: 52px;
+  }
+
+  .hero-section-container {
+    gap: 0rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section-container {
+    width: 85%;
+    justify-content: center;
+    gap: 0rem;
+  }
+
+  .contents-hero-section {
+    width: 60%;
+    height: 70vh;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 5rem;
+  }
+
+  .coming-soon-text {
+    font-size: 54px;
+    line-height: 52px;
+  }
+
+  .hero-image-container {
+    display: none;
+  }
+
+
+  .icons img:nth-child(5) {
+    left: 60%;
+    top: 65%;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .hero-section-container {
+    width: 85%;
+    justify-content: center;
+    gap: 0rem;
+  }
+
+  .contents-hero-section {
+    width: 100%;
+    height: 70vh;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 5rem;
+  }
+
+  .coming-soon-text {
+    font-size: 38px;
+    line-height: 40px;
+  }
+
+
+
+  .icons img:nth-child(1) {
     left: 10%;
-    top: 6%
-  } */
+    top: 12%;
+    width: 40px;
+    height: 40px;
+  }
 
-  /* .icons img:nth-child(2) {
-    left: 28%;
-    top: 14%;
-  } */
+  .icons img:nth-child(2) {
+    left: 48%;
+    top: 16%;
+    width: 40px;
+    height: 40px;
+  }
 
-  /* .icons img:nth-child(3) {
+  .icons img:nth-child(3) {
     right: 18%;
     top: 6%;
-  } */
+    width: 40px;
+    height: 40px;
+  }
 
-  /* .icons img:nth-child(4) {
+  .icons img:nth-child(4) {
     left: 3%;
     bottom: 10%;
-  } */
+    width: 40px;
+    height: 40px;
+  }
 
-  /* .icons img:nth-child(5) {
-    left: 50%;
-    top: 20%;
-  } */
+  .icons img:nth-child(5) {
+    left: 60%;
+    top: 65%;
+    width: 40px;
+    height: 40px;
+  }
 
-  /* .icons img:nth-child(6) {
-    left: 90%;
+  .icons img:nth-child(6) {
+    left: 80%;
     top: 50%;
-  } */
-
-  /* .hero-section-container {
-    max-width: 1400px;
-  } */
-
+    width: 40px;
+    height: 40px;
+  }
 }
+
 
 
 
