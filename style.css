@@ -239,7 +239,7 @@ p {
 
 /* styling the caption or the text "powered by elite valley" */
 .caption {
-  width: auto;
+  margin-top: 20px;
   font-size: 16px;
   font-weight: 800;
   line-height: 24px;
