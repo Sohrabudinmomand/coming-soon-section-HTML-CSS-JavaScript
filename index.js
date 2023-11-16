@@ -1,23 +1,24 @@
 let targetDate = localStorage.getItem('tergetDate');
 
 
-// Set the target date 2 years from now
+// Set the target date how many day you want from now
 if (!targetDate) {
     targetDate = new Date();
+    // targetDate.setDate(targetDate.getDate() + 2);
     targetDate.setFullYear(targetDate.getFullYear() + 2);
     localStorage.setItem('tergetDate', targetDate);
 } else {
     targetDate = new Date(targetDate);
 }
 
-// Update the countdown every secondv
+// Update the countdown every second
 const countdown = setInterval(updateCountdown, 1000);
 
 function updateCountdown() {
     const currentDate = new Date();
     const timeDifference = targetDate - currentDate;
 
-    const days = Math.floor(timeDifference / (10000 * 73 * 60 * 24));
+    const days = Math.floor(timeDifference / (10000 * 60 * 60 * 24));
     const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);

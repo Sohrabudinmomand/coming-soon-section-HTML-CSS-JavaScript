@@ -1,7 +1,9 @@
+/* imported font families from google */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,500;1,600&family=Rubik:wght@400;500&display=swap");
-
+/* imported font families from google */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;600;700;800&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,500;1,600&family=Rubik:wght@400;500&display=swap");
 
+/* some ROOT css we will use later on */
 :root {
   --primary: #066a4c;
   --secondary: gray;
@@ -11,206 +13,69 @@
   --xsmall: 0.8rem;
 }
 
+/* general css to reset the default of the browser */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-body {
+body,
+pre {
   font-family: "Rubik", sans-serif;
   font-family: "Manrope", sans-serif;
-  /* line-height: 1.5; */
+  line-height: 1.5;
 }
 
+/* already setted color and font size for paragraphs of the page */
 p {
   color: var(--secondary);
   font-size: var(--small);
 }
 
+/* positioning the first shape in the page */
 .icons img:nth-child(1) {
   position: absolute;
   left: 10%;
   top: 6%
 }
 
+/* positioning the second shape in the page */
 .icons img:nth-child(2) {
   position: absolute;
   left: 40%;
   top: 7%
 }
 
+/* positioning the third shape in the page */
 .icons img:nth-child(3) {
   position: absolute;
   right: 10%;
   top: 5%
 }
 
+/* positioning the fourth shape in the page */
 .icons img:nth-child(4) {
   position: absolute;
   left: 3%;
   bottom: 10%;
 }
 
+/* positioning the fifth shape in the page */
 .icons img:nth-child(5) {
   position: absolute;
   left: 30%;
   top: 10%;
 }
 
+/* positioning the sixth shape in the page */
 .icons img:nth-child(6) {
   position: absolute;
   left: 40%;
   top: 10%;
 }
 
-
-.hero-section-container {
-  width: 100%;
-  height: 100vh;
-  background-image: url("assets/banner.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-/* styling the background banner of the section starts here */
-
-
-.hero-section-box-of-content {
-  max-width: 1400px;
-  width: 85%;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-/* styling the background banner of the section ends here */
-
-
-
-.contents-hero-section {
-  width: 50%;
-  height: 60vh;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 1.2rem;
-  margin-top: 10rem;
-}
-
-.hero-section-container .badge {
-  background: #ffe7bb;
-  display: inline;
-  padding: 5px 10px;
-  font-size: 12px;
-}
-
-.contents-hero-section P a,
-.contents-hero-section P {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 20px;
-  letter-spacing: 0.1em;
-  text-align: left;
-  color: var(--primary);
-  text-decoration: none;
-
-}
-
-.coming-soon-text {
-  color: #024430;
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 72px;
-}
-
-#countdown {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  font-weight: 800;
-}
-
-#countdown .box {
-  background: #e0f7ff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-}
-
-#countdown .box span {
-  font-size: 1.3rem;
-  padding: 0.5rem;
-  color: var(--primary);
-}
-
-#countdown p {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: center;
-}
-
-.contents-hero-section .social-icons {
-  margin-block: 1rem;
-  display: flex;
-  gap: 0.6rem;
-}
-
-.contents-hero-section .social-icons img {
-  width: 20px;
-  height: 20px;
-}
-
-.box-of-poweredBy {}
-
-.caption {
-  width: auto;
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 24px;
-  letter-spacing: 0em;
-  color: var(--primary);
-  text-decoration: none;
-  position: absolute;
-  top: 85%;
-  left: 7%;
-  z-index: 1000;
-}
-
-
-
-
-
-
-
-.hero-image-container {
-  width: 50%;
-  height: 60vh;
-  margin-top: 10rem;
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  position: relative;
-}
-
-.hero-image {
-  width: 362px;
-  height: 316px;
-}
-
+/* using animations of css to animate the shapes of the page starts here */
 @-webkit-keyframes swinging {
   0% {
     -webkit-transform: rotate(10deg);
@@ -232,7 +97,162 @@ p {
   animation: swinging 3.5s ease-in-out forwards infinite;
 }
 
+/* using animations of css to animate the shapes of the page ends here */
 
+
+/* styling the hero section container */
+.hero-section-container {
+  width: 100%;
+  height: 100vh;
+  /* the background image below is the banner of the page */
+  background-image: url("assets/banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/* styling the hero section box of content starts here */
+/* the box below used to apply flex box on this section */
+.hero-section-box-of-content {
+  max-width: 1400px;
+  width: 85%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* styling the hero section box of content ends here */
+
+
+
+/* styling the contents box of hero section starts here */
+/* contents contains badge, title, times and social media icons */
+.contents-box-hero-section {
+  width: 50%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-top: 10rem;
+}
+
+/* styling the contents box of hero section ends here */
+
+/* the badge in the top of the contents box */
+.hero-section-container .badge {
+  background: #ffe7bb;
+  display: inline;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+/* styling the paragraphs and ancher tags in the contents box */
+.contents-box-hero-section P a,
+.contents-box-hero-section P {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: var(--primary);
+  text-decoration: none;
+
+}
+
+.coming-soon-text {
+  color: #024430;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 72px;
+}
+
+/* styling the countdown box */
+#countdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-weight: 800;
+}
+
+#countdown .box {
+  background: #e0f7ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+/* styling the times in each boxes of countdown */
+#countdown .box span {
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  color: var(--primary);
+}
+
+#countdown p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.contents-box-hero-section .social-icons {
+  margin-block: 1rem;
+  display: flex;
+  gap: 0.6rem;
+}
+
+.contents-box-hero-section .social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+/* styling box of the image */
+.hero-image-container {
+  width: 50%;
+  height: 60vh;
+  margin-top: 10rem;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  position: relative;
+}
+
+/* styling the image it slefs */
+.hero-image {
+  width: 362px;
+  height: 316px;
+}
+
+/* styling the caption or the text "powered by elite valley" */
+.caption {
+  width: auto;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: var(--primary);
+  text-decoration: none;
+  position: absolute;
+  top: 85%;
+  left: 84%;
+  z-index: 1000;
+}
+
+/* RESPONSIVED IN MIN WIDTH 1920PX */
 @media (min-width: 1920px) {
   .icons img:nth-child(1) {
     left: 10%;
@@ -265,8 +285,7 @@ p {
   }
 }
 
-
-
+/* RESPONSIVED IN MAX WIDTH 1920PX */
 @media (max-width: 1920px) {
   .hero-section-box-of-content {
     width: 80%;
@@ -304,21 +323,26 @@ p {
 
 }
 
-
+/* RESPONSIVED IN MAX WIDTH 1400PX */
 @media (max-width: 1400px) {
   .hero-section-box-of-content {
     width: 85%;
   }
 
+  .caption {
+    left: 75%;
+  }
+
 }
 
+/* RESPONSIVED IN MAX WIDTH 1200PX */
 @media (max-width: 1200px) {
   .hero-section-box-of-content {
     width: 90%;
   }
 }
 
-
+/* RESPONSIVED IN MAX WIDTH 992PX */
 @media (max-width: 992px) {
   .hero-section-box-of-content {
     width: 95%;
@@ -329,12 +353,13 @@ p {
   }
 }
 
+/* RESPONSIVED IN MAX WIDTH 768PX */
 @media (max-width: 768px) {
   .hero-section-box-of-content {
     width: 90%;
   }
 
-  .contents-hero-section {
+  .contents-box-hero-section {
     width: 80%;
   }
 
@@ -342,18 +367,22 @@ p {
     font-size: 64px;
   }
 
+  .caption {
+    left: 14%;
+  }
+
   .hero-image-container {
     display: none;
   }
 }
 
-
+/* RESPONSIVED IN MAX WIDTH 576PX */
 @media (max-width: 576px) {
   .hero-section-container {
     width: 100%;
   }
 
-  .contents-hero-section {
+  .contents-box-hero-section {
     width: 100%;
   }
 
@@ -361,6 +390,11 @@ p {
     font-size: 38px;
     line-height: 40px;
   }
+
+  .caption {
+    left: 4%;
+  }
+
 
   .icons img:nth-child(1) {
     left: 10%;
